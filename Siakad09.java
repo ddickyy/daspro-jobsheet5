@@ -3,10 +3,10 @@ public class Siakad09 {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String nama, nim;
-        char kelas;
+        String nama, nim, kualifikasi;
+        char kelas, nilaiHuruf;
         byte absen;
-        double nilaiKuis, nilaiTugas, nilaiUts, nilaiUas, nilaiAkhir;
+        double nilaiSetara, nilaiKuis, nilaiTugas, nilaiAkhir, nilaiUjian;
 
         System.out.print("Masukkan nama: ");
         nama = sc.nextLine();
@@ -21,15 +21,38 @@ public class Siakad09 {
         nilaiKuis = sc.nextDouble();
         System.out.print("Masuskkan nilai tugas: ");
         nilaiTugas = sc.nextDouble();
-        System.out.print("Masukkan nilai UTS: ");
-        nilaiUts = sc.nextDouble();
-        System.out.print("Masukkan nilai UAS: ");
-        nilaiUas = sc.nextDouble();
+        System.out.print("Masukkan nilai Ujian: ");
+        nilaiUjian = sc.nextDouble();
 
-    nilaiAkhir = (nilaiKuis*20/200+ nilaiTugas*15/100 + nilaiUts*30/100 + nilaiUas*35/100);
+    nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian)/3;
 
-        System.out.println("Mahasiswa dengan nama: " + nama + "\nNIM: " + nim);
-        System.out.println("Kelas: " + kelas + "\nAbsen: " + absen);
-        System.out.println("Nilai akhir: " + nilaiAkhir);
+    System.out.println("Mahasiswa dengan nama: " + nama + " NIM: " + nim);
+    System.out.println("Kelas: " + kelas + " Absen: " + absen);
+    System.out.println("Nilai akhir: " + nilaiAkhir);
+
+    if (nilaiAkhir >80 && nilaiAkhir <=100) {
+        System.out.println("Nilai akhir huruf: A");
+        System.out.println("Kualifikasi: Sangat Baik");
+    } else if (nilaiAkhir >73 && nilaiAkhir <= 80) {
+        System.out.println("Nilai akhir huruf: B+ ");
+        System.out.println("Kualifikasi: Lebih dari Baik");
+    } else if (nilaiAkhir >65 && nilaiAkhir <= 73) {
+        System.out.println("Nilai akhir huruf: B ");
+        System.out.println("Kualifikasi: Baik");
+    } else if (nilaiAkhir >60 && nilaiAkhir <= 65) {
+        System.out.println("Nilai akhir huruf: C+ ");
+        System.out.println("Kualifikasi: Lebih dari Cukup");
+    } else if (nilaiAkhir >50 && nilaiAkhir <= 60) {
+        System.out.println("Nilai akhir huruf: C ");
+        System.out.println("Kualifikasi: Cukup");
+    } else if (nilaiAkhir >39 && nilaiAkhir >= 50) {
+        System.out.println("Nilai akhir huruf: D ");
+        System.out.println("Kualifikasi: Kurang");
+    } else if (nilaiAkhir <= 39) {
+        System.out.println("Nilai akhir huruf: E ");
+        System.out.println("Kualifikasi: Gagal");
+    }
+
+
     }
 }
