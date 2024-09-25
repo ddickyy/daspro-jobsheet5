@@ -10,14 +10,10 @@ public class PemilihanBilangan09 {
 
     System.out.print("Masukkan sebuah angka: ");
     int angka = bil.nextInt();
+    String hasil;
+    
+    hasil = (angka % 2 == 0) ? " termasuk bilangan genap" : " termasuk bilangan ganjil";
 
-    if (angka % 2 == 0)
-    {
-        System.out.println("Angka " +angka + " termasuk bilangan genap");
-    }
-    else 
-    {
-        System.out.println("Angka " +angka + " termasuk bilangan ganjil");
-    }
+    System.out.println(angka + hasil);
     }
 }
