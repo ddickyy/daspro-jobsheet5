@@ -49,7 +49,7 @@ String ukuranBaru = Character.toString(ukuranCup);
             ukuranBaru = "Size yang dipilih tidak tersedia";
         
     }
-    double diskon = keanggotaan ? 0 : 0.1;
+    double diskon = keanggotaan ? 0.1 : 0;
     double nominalBayar = totalHarga - (diskon * totalHarga);
 
     System.out.println("Item Pembelian: " + jumlah + " " + menu + " dengan ukuran cup " + ukuranBaru);
