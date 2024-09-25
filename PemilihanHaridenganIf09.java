@@ -14,21 +14,14 @@ public class PemilihanHaridenganIf09 {
         System.out.print("Input day name with number: ");
         dayName = hari.nextInt();
     
-        switch (dayName) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-                dayType = "weekday";
-                break;
-            case 6:
-            case 7:
-                dayType = "weekend";
-                break;
-            default:
-                dayType = "invalid number";
+        if (dayName >= 1 && dayName <=5) {
+            dayType = "weekday";
+        } else if (dayName >= 6 && dayName <= 7) {
+            dayType = "weekend";
+        } else {
+            dayType = "invalid number";
         }
+
         System.out.println(dayName + " is a " + dayType);
         }
     }
