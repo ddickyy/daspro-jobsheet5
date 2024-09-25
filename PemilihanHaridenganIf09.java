@@ -27,7 +27,7 @@ public class PemilihanHaridenganIf09 {
                 dayType = "weekend";
                 break;
             default:
-                dayType = "invalid day name";
+                dayType = "invalid number";
         }
         System.out.println(dayName + " is a " + dayType);
         }
